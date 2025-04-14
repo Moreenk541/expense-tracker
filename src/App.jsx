@@ -1,19 +1,21 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Expenses from './Expenses'
 import Form from './Form'
 import Searchbar from './Searchbar'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [expenses, setExpenses] = useState([]);
 
+  function handleAddExpense(newExpense){
+    const newExpenseWithId = {...newExpense, id: Date.now()}
+    setExpenses( (prevExp) => [...prevExp, newExpenseWithId]);
+  }
+  
   return (
     <>
-      <Form/>
-       <Searchbar/>
-      <Expenses/>
+      <Form  onAddExp = {handleAddExpense}/>
+      <Expenses />
     </>
   )
 }
