@@ -1,8 +1,11 @@
 import React from "react";
+import DeleteButton from "./DeleteButton";
+import SortControl from "./SortControl";
 
-function Expenses({ expenses }) {
+function Expenses({ expenses,onDeleteExpense, onSortExpenses }) {
   return (
     <>
+    <SortControl onSort={onSortExpenses} />
       <table border="1">
         <thead>
           <tr>
@@ -21,6 +24,10 @@ function Expenses({ expenses }) {
               <td>{expense.category}</td>
               <td>{expense.amount}</td>
               <td>{expense.date}</td>
+              <td>
+              <DeleteButton onDelete={() => onDeleteExpense(expense.id)} />
+              </td>
+
             </tr>
           ))}
         </tbody>
