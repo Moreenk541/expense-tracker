@@ -1,16 +1,15 @@
-// Form.js
 import React, { useState } from "react";
-function Form( { onAddExp }) {
-    const [expenseName, setExpenseName] = useState('');
-    const [description, setDescription] = useState('');
-    const [category, setCategory] = useState('');
-    const [amount, setAmount] = useState('');
-    const [date, setDate] = useState('');
+
+function Form({ onAddExp }) {
+  const [expenseName, setExpenseName] = useState('');
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
+  const [amount, setAmount] = useState('');
+  const [date, setDate] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newExpense = {
-      id: Date.now(),
       name: expenseName,
       description,
       category,
@@ -18,8 +17,7 @@ function Form( { onAddExp }) {
       date
     };
 
-    onAddExp(newExpense)
-    
+    onAddExp(newExpense);
 
     setExpenseName('');
     setDescription('');
@@ -49,3 +47,4 @@ function Form( { onAddExp }) {
 };
 
 export default Form;
+

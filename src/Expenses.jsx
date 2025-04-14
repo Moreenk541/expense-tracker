@@ -1,18 +1,8 @@
-import React, { useState } from "react";
-import Form from "./Form";
+import React from "react";
 
-function Expenses( ) {
-    const [expenses, setExpenses] = useState([]);
-
-    const handleAddExpense = (newExpense) => {
-      setExpenses([...expenses, newExpense]);
-    };
-
-  
+function Expenses({ expenses }) {
   return (
     <>
-     
-
       <table border="1">
         <thead>
           <tr>
