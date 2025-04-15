@@ -5,6 +5,7 @@ import SortControl from "./SortControl";
 function Expenses({ expenses,onDeleteExpense, onSortExpenses }) {
   return (
     <>
+    <div class ="Display">
     <SortControl onSort={onSortExpenses} />
       <table border="1">
         <thead>
@@ -32,6 +33,7 @@ function Expenses({ expenses,onDeleteExpense, onSortExpenses }) {
           ))}
         </tbody>
       </table>
+      </div>
     </>
   );
 }

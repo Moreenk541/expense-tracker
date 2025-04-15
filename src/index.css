@@ -66,3 +66,24 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+.Display{
+  margin:auto;
+  display: flex;
+  padding: 20px;
+}
+.Display table{
+  background-color: #d3d3d9;
+  color:#1a1a1a;
+  
+  align-items: center;
+  justify-content: space-between;
+  margin:auto;
+ 
+}
+.Display label,select{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin:auto;
+ 
+}

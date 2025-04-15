@@ -32,6 +32,7 @@ function Form({ onAddExp }) {
         <h1>Expense Tracker</h1>
         <p>Start taking control of your finances and life. Record, categorize and analyze your spending.</p>
       </div>
+      <div class="Display">
       <form onSubmit={handleSubmit}>
         <h1>Add Expense</h1>
         <label>Enter your expense details below</label><br />
@@ -42,6 +43,7 @@ function Form({ onAddExp }) {
         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} /><br />
         <button type="submit" >Submit</button>
       </form>
+      </div>
     </>
   );
 };

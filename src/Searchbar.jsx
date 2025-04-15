@@ -3,7 +3,7 @@ import React from 'react';
 
 function Searchbar({ searchTerm, setSearchTerm }) {
   return (
-    <div>
+    <div class ="Display">
       <input
         type="text"
         placeholder="Search expenses..."
